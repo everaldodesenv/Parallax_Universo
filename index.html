@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <section>
+        <div id="astro_1" class="imagem"></div>
+        <div id="astro_2" class="imagem"></div>
+        <div id="astro_3" class="imagem"></div>
+        <div id="astro_4" class="imagem"></div>
+    </section>
+
+    <div class="fade"></div>
+
+    <section class="star-wars">
+
+        <audio autoplay>
+            <source src="stw.mp3">
+      </audio>
+        <div class="crawl">
+
+            <div class="title">
+                <p>Episode IV</p>
+
+            </div>
+
+            <p>UMA NOVA ESPERANÇA É um período de guerra civil. Partindo de uma base secreta, naves rebeldes atacam e conquistam sua primeira vitória contra o perverso Império Galáctico.</p>
+
+            <p>Durante a batalha, espiões rebeldes conseguem roubar os planos secretos da arma decisiva do Império, a ESTRELA DA MORTE, uma estação espacial blindada com poder suficiente para destruir um planeta inteiro.</p>
+
+            <p>Perseguida pelos sinistros agentes do Império, a princesa Leia, apressa-se em voltar para casa a bordo de sua nave estelar, protegendo os planos roubados que podem salvar seu povo e restaurar a liberdade na galáxia....
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <article id="content">
+        <script>
+            for (var i = 1; i < 100; i++) {
+                document.write('<h1>Testando parallax' + i + '<h1>');
+            }
+        </script>
+    </article>
+
+    <script>
+        function parallax() {
+            //declarando as variaveis
+            var astro_1 = document.getElementById('astro_1');
+            var astro_2 = document.getElementById('astro_2');
+            var astro_3 = document.getElementById('astro_3');
+            var astro_4 = document.getElementById('astro_3');
+
+            //aplicando a posição das imagens
+            astro_1.style.top = -(window.pageYOffset / 8) + 'px';
+            astro_2.style.top = -(window.pageYOffset / 5) + 'px';
+            astro_3.style.top = -(window.pageYOffset / 4) + 'px';
+            astro_4.style.top = -(window.pageYOffset / 4) + 'px';
+        }
+        window.addEventListener("scroll", parallax, false)
+    </script>
+
+
+
+</body>
+
+</html>
